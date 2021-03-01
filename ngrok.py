@@ -88,7 +88,9 @@ usage: ngrok.py [--auth-token <auth_token>] <protocol> <port> [addr]
         while True:
             buf = sock1.read(4096)
             sock2.write(buf)
-            if buf == b'': sock2.close()
+            if buf == b'':
+                sock2.close()
+                break
     while True:
         conn, remote_addr = self.accept()
         print('new connection from %s:%d'%(remote_addr))

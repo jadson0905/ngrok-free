@@ -29,7 +29,7 @@ class Stream:
                 self.onupdate()
         elif t == 2: # wndinc
             self.window += int.from_bytes(data, 'big')
-            self.send(b'')
+            if not self.closed: self.send(b'')
         elif t == 3: # goaway
             if not self.closed:
                 self.closed = True
