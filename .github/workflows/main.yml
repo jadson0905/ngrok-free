@@ -1,0 +1,5 @@
+usage: ngrok.py [--auth-token <auth_token>] <protocol> <port> [addr]
+
+<protocol> can be one of `https`, `http`, `tls`, `tcp`.
+<port> is the target port on your machine.
+<addr> (optional) is the reserved remote address, if any.   
